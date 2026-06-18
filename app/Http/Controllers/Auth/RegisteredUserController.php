@@ -46,6 +46,10 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
+        session()->flash('success', 'Registration successful! Welcome to Southern de Oro Philippines College.');
+
+        sleep(3);
+
         return redirect(route('dashboard', absolute: false));
     }
 }
